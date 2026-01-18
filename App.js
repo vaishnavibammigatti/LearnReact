@@ -1,3 +1,19 @@
-const heading = React.createElement("h1",{id:"heading"},"Hello World from React!");
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const Title = () => {
+  return <h1 className="heading"> Namaste React</h1>;
+};
+
+//Component Composition
+const HeadingComponent = () => {
+  return (
+  <div>
+    <Title />
+    <h1 id="heading">Namaste React Functional Component</h1>;
+  </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<HeadingComponent />);
